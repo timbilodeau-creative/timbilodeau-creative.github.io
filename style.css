@@ -1,0 +1,61 @@
+/* ====== Base Theme ====== */
+:root{
+  --bg:#0f1216; --fg:#e9eef2; --mut:#9aa4af;
+  --link:#8ad3ff; --card:#151a21; --border:#232a33;
+  --accent:#8ad3ff;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  color:var(--fg);
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+}
+
+/* ====== Layout ====== */
+.wrap{max-width:720px;margin:8vh auto;padding:0 1.25rem}
+section{margin:1rem 0}
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:1rem 1.25rem;
+}
+h1{font-size:2rem;margin:.25rem 0}
+h2{font-size:1.35rem;margin:.25rem 0 .5rem}
+.sub{color:var(--mut);margin:0 0 1.25rem}
+
+/* ====== Links & Buttons ====== */
+a{color:var(--link);text-decoration:none}
+a:hover{text-decoration:underline}
+.btns a{
+  display:inline-block; margin:.4rem .4rem 0 0; padding:.55rem .9rem;
+  border:1px solid #2a3440; border-radius:10px;
+}
+.btn{display:inline-block;padding:.6rem .9rem;border-radius:10px;border:1px solid var(--border)}
+.btn:hover{border-color:#344050}
+
+/* ====== Nav ====== */
+.nav{display:flex;gap:1rem;flex-wrap:wrap;margin:0 0 2rem}
+.nav a{font-weight:600}
+.nav a[aria-current="page"]{color:#fff;position:relative}
+.nav a[aria-current="page"]::after{
+  content:""; position:absolute; left:0; right:0; bottom:-6px; height:2px;
+  background:var(--accent); border-radius:2px;
+}
+
+/* ====== Lists / utils ====== */
+ul{padding-left:1.2rem;margin:.5rem 0}
+.muted{color:var(--mut)}
+.grid{
+  display:grid; gap:1rem;
+  grid-template-columns:repeat(12,1fr);
+}
+.col-12{grid-column:span 12}
+.col-6{grid-column:span 6}
+@media (max-width:640px){ .col-6{grid-column:span 12} }
+
+/* ====== Footer ====== */
+footer{opacity:.7; font-size:.9rem; margin:2rem 0}
