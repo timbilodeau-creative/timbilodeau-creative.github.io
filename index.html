@@ -5,24 +5,18 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Tim Bilodeau — Game Producer / Team Lead</title>
   <meta name="description" content="Game Producer / Team Lead. Bridging design, code, and art. CT & Fang worldbuilder.">
-  <meta property="og:title" content="Tim Bilodeau — Game Producer / Team Lead">
-  <meta property="og:description" content="Quick portfolio hub: projects, Carrd, contact.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://timbilodeau-creative.github.io/">
   <link rel="icon" href="favicon.ico">
-  <style>
-    :root { --bg:#0f1216; --fg:#e9eef2; --mut:#9aa4af; --link:#8ad3ff; --card:#151a21; }
-    *{box-sizing:border-box} body{margin:0; font:16px/1.6 system-ui, Arial, sans-serif; color:var(--fg); background:var(--bg)}
-    .wrap{max-width:720px; margin:8vh auto; padding:0 1.25rem}
-    h1{font-size:2rem; margin:.25rem 0} .sub{color:var(--mut); margin:0 0 1.25rem}
-    .card{background:var(--card); border:1px solid #232a33; border-radius:12px; padding:1rem 1.25rem; margin:1rem 0}
-    a{color:var(--link); text-decoration:none} a:hover{text-decoration:underline}
-    ul{padding-left:1.2rem; margin:.5rem 0}
-    .btns a{display:inline-block; margin:.4rem .4rem 0 0; padding:.55rem .9rem; border:1px solid #2a3440; border-radius:10px}
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main class="wrap">
+    <nav class="nav">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
     <header>
       <h1>Tim Bilodeau</h1>
       <p class="sub">Game Producer / Team Lead · UI/UX · Programming · 2D & 3D Art</p>
@@ -31,21 +25,24 @@
     <section class="card">
       <p>I lead small multidisciplinary teams and build worlds. Hands-on producer: I delegate, unblock, and ship—while contributing design, code, and art.</p>
       <div class="btns">
-        <a href="https://YOUR-CARRD-URL">Full Portfolio (Carrd)</a>
-        <a href="mailto:timbilodeaugames@gmail.com">Email</a>
-        <a href="resume.pdf">Download Résumé (PDF)</a>
-        <a href="https://github.com/timbilodeau-creative">GitHub Repos</a>
+        <a class="btn" href="https://YOUR-CARRD-URL">Full Portfolio (Carrd)</a>
+        <a class="btn" href="mailto:timbilodeaugames@gmail.com">Email</a>
+        <a class="btn" href="resume.pdf">Download Résumé (PDF)</a>
+        <a class="btn" href="https://github.com/timbilodeau-creative">GitHub Repos</a>
       </div>
     </section>
 
     <section class="card">
-      <strong>Highlights</strong>
+      <h2>Highlights</h2>
       <ul>
         <li>Game Producer / Team Lead — jams & prototypes shipped on deadline</li>
         <li>Unity since grade 9; dabbling in Unreal & Godot</li>
         <li>CT & Fang: ongoing IP — worldbuilding, design, and tooling</li>
       </ul>
     </section>
+
+    <footer class="muted">© <span id="y"></span> Tim Bilodeau</footer>
   </main>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
