@@ -67,6 +67,42 @@ header h1 {
   box-shadow: 0 4px 12px rgba(0,0,0,0.6);
 }
 
+/* ====== Timeline ====== */
+.timeline {
+  position: relative;
+  margin: 2rem 0;
+  padding-left: 2rem;
+  border-left: 2px solid var(--border);
+}
+
+.timeline-item {
+  margin: 2rem 0;
+  position: relative;
+}
+
+.timeline-date {
+  position: absolute;
+  left: -6.5rem;
+  top: 0;
+  width: 5rem;
+  text-align: right;
+  font-size: 0.9rem;
+  color: var(--mut);
+}
+
+.timeline-content {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.timeline-content h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+
 /* ====== Lists / utils ====== */
 ul{padding-left:1.2rem;margin:.5rem 0}
 .muted{color:var(--mut)}
