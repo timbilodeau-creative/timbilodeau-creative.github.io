@@ -46,6 +46,27 @@ a:hover{text-decoration:underline}
   background:var(--accent); border-radius:2px;
 }
 
+/* ====== Header ====== */
+header {
+  text-align: center;
+  padding: 1rem;
+}
+
+header h1 {
+  margin-top: 0.5rem;
+}
+
+.profile-pic {
+  display: block;
+  margin: 0 auto 1rem;
+  border-radius: 50%;        /* circular crop */
+  max-width: 160px;          /* scales down on smaller screens */
+  width: 100%;
+  height: auto;
+  border: 2px solid var(--border); /* subtle frame */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+
 /* ====== Lists / utils ====== */
 ul{padding-left:1.2rem;margin:.5rem 0}
 .muted{color:var(--mut)}
