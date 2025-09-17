@@ -116,3 +116,61 @@ ul{padding-left:1.2rem;margin:.5rem 0}
 
 /* ====== Footer ====== */
 footer{opacity:.7; font-size:.9rem; margin:2rem 0}
+
+/* ====== WIP Frosted Cover ====== */
+.wip-area { position: relative; }
+
+/* The blur/obscure panel that fully covers the section */
+.wip-cover{
+  position: absolute;
+  inset: -8px;                  /* slight bleed so edges are fully covered */
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  border-radius: 14px;
+
+  /* Frosted glass effect */
+  background:
+    linear-gradient(135deg, rgba(21,26,33,.78), rgba(21,26,33,.66)),
+    radial-gradient(1200px 600px at 10% 10%, rgba(255,255,255,.04), transparent 40%),
+    radial-gradient(1000px 500px at 90% 80%, rgba(255,255,255,.03), transparent 40%);
+  backdrop-filter: blur(12px) saturate(80%);
+  -webkit-backdrop-filter: blur(12px) saturate(80%);
+
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+  z-index: 2;
+
+  /* Block interaction with covered content */
+  pointer-events: auto;
+}
+
+/* The little message card on top of the fog */
+.wip-card{
+  background: rgba(15,18,22,.55);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.1rem 1.25rem;
+  max-width: 520px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,.35);
+}
+
+.wip-card h2{
+  margin: 0 0 .35rem;
+  font-size: 1.15rem;
+}
+.wip-card p{
+  margin: 0;
+  color: var(--mut);
+}
+
+/* Respect users who prefer less transparency/motion */
+@media (prefers-reduced-transparency: reduce){
+  .wip-cover{
+    background: var(--card);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}
+
