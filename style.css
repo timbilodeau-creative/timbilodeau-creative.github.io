@@ -174,3 +174,13 @@ footer{opacity:.7; font-size:.9rem; margin:2rem 0}
   }
 }
 
+/*Image Settings */
+
+.timeline-content img {
+  display: block;        /* so margin auto works */
+  margin: 0 auto 1rem;   /* centers the image horizontally + a bit of space below */
+  max-width: 100%;       /* keep it responsive inside the card */
+  height: auto;
+}
+
+
